@@ -45,7 +45,7 @@ include_once 'connection.php';
 		if(!empty($email) && !empty($password)){
 			
 			$encrypted_password = md5($password);
-			$user-> does_user_exist($email,$password);
+			$user-> does_user_exist($email,$encrypted_password);
 			
 		}else{
 			echo json_encode("you must type both inputs");
